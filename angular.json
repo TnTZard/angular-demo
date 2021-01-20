@@ -25,9 +25,15 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "src/theme.less",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-ng-zorro"
+    }
+  },
+  "defaultProject": "my-ng-zorro",
+  "cli": {
+    "analytics": "a0f021a5-a1ec-41f2-8fad-9c2482cbf119"
+  }
 }
