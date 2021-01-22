@@ -21,6 +21,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 // modules
 import { MainModule } from './pages/main/main.module';
 import { SetupModule } from './pages/setup/setup.module';
+import {LocalStorageService} from './services/local-storage/local-storage.service';
 
 
 registerLocaleData(zh);
@@ -47,7 +48,11 @@ registerLocaleData(zh);
     SetupModule,
     MainModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN },
+    LocalStorageService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
